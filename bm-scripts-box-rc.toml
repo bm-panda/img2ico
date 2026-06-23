@@ -1,0 +1,23 @@
+[bmscriptsbox]
+
+[bmscriptsbox.info]
+id = "3c356f90-3da8-4bc3-8fed-aeada580b475"
+name = "图片转ICO"
+desc = "将选中的图片文件转换为多尺寸ICO图标文件，支持16/32/48/64/128/256 尺寸"
+version = "1.0.0"
+icon = "./imgs/ico.png"
+
+[bmscriptsbox.runtime]
+language = "powershell"
+language_version = ">=5.1"
+entry = "main.ps1"
+terminal = "never"
+
+[bmscriptsbox.triggers.context_menu]
+enabled = true
+targets = ["files"]
+
+[[bmscriptsbox.inputs]]
+name = "target_paths"
+type = "paths"
+description = "需要转换的图片路径"
